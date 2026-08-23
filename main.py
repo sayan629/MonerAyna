@@ -32,7 +32,7 @@ top_countries = ['Other' , 'India' , 'USA' , 'Canada', 'Australia', 'UK', 'Germa
 
 @app.post('/predict')
 def predict(data : StudentData):
-    country_group = 
+    country_group = data.country  if data.country in top_countries else "Other"
     input_row = pd.DataFrame([{
         'Age'                       :data.age,
         'Gender'                    :data.gender,
@@ -46,7 +46,7 @@ def predict(data : StudentData):
         'Physical_Activity_Hours'   :data.physical_activity_hours,
         'Sleep_Hours_Per_Night'     :data.sleep_hours_per_night,
         'Stress_Level'              :data.stress_level,
-        'Grouped_country' 
+        'Grouped_country'           : country_group
    }])
 
     
