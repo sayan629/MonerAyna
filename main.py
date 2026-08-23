@@ -1,7 +1,8 @@
 import joblib
 import pandas as pd
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from typing import Literal
 
 model = joblib.load('Mental_Health_Model.pk1')
 
@@ -16,7 +17,7 @@ class StudentData(BaseModel):
     academic_level          : Literal['Undergraduate', 'Graduate', 'High School']
     most_used_platform      : Literal['Facebook', 'LinkedIn', 'Instagram', 'Snapchat','Twitter','YouTube', 'TikTok', 'LINE', 'KakaoTalk', 'VKontakte', 'WhatsApp','WeChat']
     purpose_of_use          : Literal['Networking', 'Education', 'Entertainment', 'News']
-    avg_daily_usage_hours   : float = Field(..., ge=0, le=24)
+    avg_daily_usage_hours   : float = Field(..., ge=0, le=24) #6
     daily_unlocks           : int   = Field(..., ge=0)
     study_hours             : float = Field(..., ge=0, le=24)
     physical_activity_hours : float = Field(..., ge=0, le=24)
