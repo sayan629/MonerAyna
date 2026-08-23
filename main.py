@@ -6,6 +6,8 @@ from typing import Literal
 
 model = joblib.load('Mental_Health_Model.pk1')
 
+top_countries = ['Other' , 'India' , 'USA' , 'Canada', 'Australia', 'UK', 'Germany', 'Mexico', 'Turkey', 'France']
+
 app = FastAPI()
 
 
@@ -23,15 +25,17 @@ class StudentData(BaseModel):
     physical_activity_hours : float = Field(..., ge=0, le=24)
     sleep_hours_per_night   : float = Field(..., ge=0, le=24)
     stress_level            : Literal['Medium', 'Low', 'Very High', 'High']  
-    
+
+    #Describe what we send back
+class PredictionResponse(BaseModel):
+    predicted_mental_health_score:float
 
 @app.get('/')
 def greet():
     return {'Welcome Sayan'}
 
-top_countries = ['Other' , 'India' , 'USA' , 'Canada', 'Australia', 'UK', 'Germany', 'Mexico', 'Turkey', 'France']
 
-@app.post('/predict')
+@app.post('/predict', response_model=PredictionResponse)
 def predict(data : StudentData):
     country_group = data.country  if data.country in top_countries else "Other"
     input_row = pd.DataFrame([{
