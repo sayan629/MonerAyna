@@ -1,4 +1,5 @@
 import joblib
+import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -28,8 +29,8 @@ def greet():
     return {'Welcome Sayan'}
 
 @app.post('/predict')
-def predict(data : dict):
-    input_row = {
+def predict(data : StudentData):
+    input_row = pd.DataFrame([{
         'Age', 
         'Gender',
         'Country',
@@ -44,4 +45,5 @@ def predict(data : dict):
         'Stress_Level',
         'Mental_Health_Score',
         'Grouped_country'
-    }
+    }])
+    
