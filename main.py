@@ -49,4 +49,4 @@ def predict(data : StudentData):
         'Grouped_country'           : country_group
    }])
 
-    
+    prediction = model.predict(input_row)[0]
