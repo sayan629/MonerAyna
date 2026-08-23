@@ -29,6 +29,7 @@ class StudentData(BaseModel):
     #Describe what we send back
 class PredictionResponse(BaseModel):
     predicted_mental_health_score:float
+    
 
 @app.get('/')
 def greet():
@@ -55,3 +56,4 @@ def predict(data : StudentData):
    }])
 
     prediction = model.predict(input_row)[0]
+    return PredictionResponse(predicted_mental_health_score=round(float(prediction),2))
