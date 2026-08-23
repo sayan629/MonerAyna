@@ -28,8 +28,11 @@ class StudentData(BaseModel):
 def greet():
     return {'Welcome Sayan'}
 
+top_countries = ['Other' , 'India' , 'USA' , 'Canada', 'Australia', 'UK', 'Germany', 'Mexico', 'Turkey', 'France']
+
 @app.post('/predict')
 def predict(data : StudentData):
+    country_group = 
     input_row = pd.DataFrame([{
         'Age'                       :data.age,
         'Gender'                    :data.gender,
