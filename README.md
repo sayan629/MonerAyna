@@ -555,7 +555,7 @@ Then reference them like this:
 Example:
 
 <p align="center">
-  <img src="screenshots/home.png" alt="Moner Ayna Home Page" width="900">
+  <img src="home.png" alt="Moner Ayna Home Page" width="900">
 </p>
 
 ---
