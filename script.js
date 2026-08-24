@@ -1,7 +1,7 @@
 // =============================================================
 // CONFIG
 // =============================================================
-const API_URL = "https://monerayna.onrender.com/";
+const API_URL = "https://monerayna.onrender.com/predict";
 
 // The gauge is a visual aid only — the FastAPI model doesn't publish a
 // guaranteed min/max for its output, so we clamp the arc fill to this
