@@ -120,7 +120,7 @@ body{
   background-clip: text;
   color: var(--pine);
   -webkit-text-fill-color: transparent;
-  animation: shimmer 1.8s ease-out 0.35s both;
+  animation: shimmer 3.4s ease-in-out 0.3s infinite alternate;
 }
 
 .brand-native{
