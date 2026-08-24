@@ -540,17 +540,6 @@ Swagger provides an interactive environment for sending requests and viewing res
 
 The Moner Ayna interface is designed around a clean, approachable visual identity focused on student mental-health awareness.
 
-Add your screenshots inside:
-
-```text
-screenshots/
-```
-
-Then reference them like this:
-
-```markdown
-![Moner Ayna Home Page](screenshots/home.png)
-```
 
 Example:
 
