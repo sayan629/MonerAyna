@@ -89,7 +89,7 @@ The name **Moner Ayna**, meaning **"Mirror of the Mind"**, represents the projec
 | 🧠 ML Prediction     | Machine-learning-based mental health prediction |
 | 📊 Dataset           | Student social-media and mental-health dataset  |
 | 🤖 Trained Model     | Pre-trained Scikit-learn model                  |
-| ⚡ FastAPI            | High-performance Python backend                 |
+| ⚡ FastAPI            | High-performance Python backend                |
 | 🌐 Web UI            | Simple browser-based interface                  |
 | 🔗 REST API          | API-based model prediction                      |
 | 🚀 Deployment        | Cloud deployment using Render                   |
@@ -102,14 +102,14 @@ The name **Moner Ayna**, meaning **"Mirror of the Mind"**, represents the projec
 
 ```text
                          ┌─────────────────────────┐
-                         │       👤 User / UI       │
-                         │     HTML + CSS + JS      │
+                         │       👤 User / UI      │
+                         │     HTML + CSS + JS     │
                          └────────────┬────────────┘
                                       │
                                       │ HTTP Request
                                       ▼
                          ┌─────────────────────────┐
-                         │    ⚡ FastAPI Backend    │
+                         │    ⚡ FastAPI Backend   │
                          │         main.py         │
                          └────────────┬────────────┘
                                       │
@@ -124,7 +124,7 @@ The name **Moner Ayna**, meaning **"Mirror of the Mind"**, represents the projec
                                       │ Prediction
                                       ▼
                          ┌─────────────────────────┐
-                         │     📊 Result / Insight  │
+                         │     📊 Result / Insight │
                          └─────────────────────────┘
 ```
 
